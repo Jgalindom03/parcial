@@ -3,7 +3,7 @@ import ContactoModel from "../db/Contacto.ts";
 
 const getContactos = async (req: Request, res: Response) => {
     try {
-        const contacto = await ContactoModel.findOne().exec();
+        const contacto = await ContactoModel.find().exec();
         res.status(200).send({
             nombre:contacto.nombre,
             dni:contacto.dni
